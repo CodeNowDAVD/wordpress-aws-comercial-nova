@@ -1,0 +1,5 @@
+- Evidencia de Cost Explorer con 0.00 USD por AWS Academy.
+- Estimación mensual referencial.
+- Componentes de mayor costo.
+- 3 o más acciones de optimización.
+- Comparación arquitectura inicial vs optimizada.
