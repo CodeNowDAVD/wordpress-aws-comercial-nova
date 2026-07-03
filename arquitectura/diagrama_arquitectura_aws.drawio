@@ -1,0 +1,121 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="WordPress AWS Architecture Pro Clean" id="QEosWcmQbfh6AMxqtYV1">
+    <mxGraphModel dx="1746" dy="1180" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="-BKClFIYBC12abc-iSJ8-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fad7ac;strokeColor=#000000;align=center;verticalAlign=middle;fontSize=20;" value="&lt;b&gt;Arquitectura WordPress en AWS — Comercial Nova&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;Región: us-east-1 (Norte de Virginia) · VPC: vpc-comercial-nova · CIDR: 10.0.0.0/16&lt;/font&gt;" vertex="1">
+          <mxGeometry height="50" width="760" x="230" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-2" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=light-dark(#371a94, #334a6c);strokeWidth=2;dashed=1;fontColor=#334155;align=left;verticalAlign=top;spacingLeft=14;spacingTop=10;fontSize=14;" value="&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;AWS Cloud&lt;/b&gt;" vertex="1">
+          <mxGeometry height="800" width="980" x="70" y="100" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=light-dark(#ffffff, #151719);strokeColor=#000000;strokeWidth=2;fontColor=#1E3A8A;align=left;verticalAlign=top;spacingLeft=14;spacingTop=10;fontSize=14;" value="&lt;b&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;VPC: vpc-comercial-nova&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:11px&quot;&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;     &lt;/span&gt;CIDR: 10.0.0.0/16&lt;/font&gt;" vertex="1">
+          <mxGeometry height="690" width="915" x="105" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-4" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#64748B;fontColor=#1F2937;strokeWidth=2;verticalAlign=middle;align=center;fontSize=13;" value="&lt;b&gt;Usuario / Internet&lt;/b&gt;" vertex="1">
+          <mxGeometry height="55" width="190" x="465" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-5" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EFF6FF;strokeColor=light-dark(#000000, #699eff);fontColor=#1D4ED8;strokeWidth=2;verticalAlign=middle;align=center;fontSize=12;" value="&lt;b&gt;Internet Gateway&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;igw-comercial-nova&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="190" x="460" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#DBEAFE;strokeColor=light-dark(#000000, #699eff);fontColor=#1E40AF;strokeWidth=2;verticalAlign=middle;align=center;fontSize=13;" value="&lt;b&gt;Application Load Balancer&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;alb-comercial-nova · HTTP/80&lt;/font&gt;" vertex="1">
+          <mxGeometry height="65" width="225" x="442.5" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-7" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#EEF2FF;strokeColor=#000000;fontColor=#312E81;strokeWidth=2;verticalAlign=middle;align=center;fontSize=12;" value="&lt;b&gt;Target Group&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;tg-wordpress-comercial-nova · Health check: /&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="225" x="440" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-8" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;strokeColor=light-dark(#000000, #a25700);dashed=1;strokeWidth=3;fontColor=#92400E;verticalAlign=top;align=left;spacingLeft=12;spacingTop=8;fontSize=12;" value="&lt;b&gt;Auto Scaling Group&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size: 10px; color: rgb(0, 0, 0);&quot;&gt;asg-wordpress-comercial-nova · Desired 2 · Min 1 · Max 3 · CPU objetivo 70%&lt;/font&gt;" vertex="1">
+          <mxGeometry height="150" width="810" x="155" y="500" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-9" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=light-dark(#000000, #a25700);strokeWidth=2;fontColor=#92400E;verticalAlign=top;align=center;spacingTop=8;fontSize=12;" value="&lt;b&gt;Public Subnet 1a&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;10.0.1.0/24 · AZ us-east-1a&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="300" x="190" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-10" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFF7ED;strokeColor=light-dark(#000000, #a25700);strokeWidth=2;fontColor=#92400E;verticalAlign=top;align=center;spacingTop=8;fontSize=12;" value="&lt;b&gt;Public Subnet 1b&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;10.0.2.0/24 · AZ us-east-1b&lt;/font&gt;" vertex="1">
+          <mxGeometry height="105" width="300" x="625" y="545" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-11" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=default;fontColor=#92400E;strokeWidth=2;align=center;verticalAlign=middle;fontSize=12;" value="&lt;b&gt;EC2 WordPress 1a&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Amazon Linux 2023&lt;br&gt;Apache + PHP + WordPress&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="210" x="230" y="595" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-12" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=light-dark(#000000, #a25700);fontColor=#92400E;strokeWidth=2;align=center;verticalAlign=middle;fontSize=12;" value="&lt;b&gt;EC2 WordPress 1b&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Amazon Linux 2023&lt;br&gt;Apache + PHP + WordPress&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="210" x="670" y="595" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-13" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F5F3FF;strokeColor=#7C3AED;strokeWidth=2;fontColor=#4C1D95;verticalAlign=top;align=center;spacingTop=8;fontSize=12;" value="&lt;b&gt;Private DB Subnets&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;subnet-privada-1a: 10.0.11.0/24 · subnet-privada-1b: 10.0.12.0/24&lt;/font&gt;" vertex="1">
+          <mxGeometry height="125" width="480" x="320" y="700" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-14" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FFFFFF;strokeColor=#7C3AED;fontColor=#4C1D95;strokeWidth=2;align=center;verticalAlign=middle;fontSize=12;" value="&lt;b&gt;Amazon RDS MySQL&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;rds-wordpress-comercial-nova&lt;br&gt;&lt;span style=&quot;caret-color: rgb(0, 0, 0); color: rgb(0, 0, 0); text-align: start;&quot;&gt;DB: wordpressdb&lt;/span&gt;&amp;nbsp;· Acceso público: No · Backups: 7 días&lt;/font&gt;" vertex="1">
+          <mxGeometry height="55" width="340" x="390" y="760" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-15" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FDF2F8;strokeColor=default;fontColor=#831843;strokeWidth=2;align=center;verticalAlign=middle;fontSize=12;" value="&lt;b&gt;Amazon CloudWatch&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Dashboard · métricas EC2/RDS&lt;br&gt;Alarma CPU &gt; 70%&lt;/font&gt;" vertex="1">
+          <mxGeometry height="85" width="240" x="1130" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-16" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#F0FDF4;strokeColor=light-dark(#000000, #27a053);fontColor=#166534;strokeWidth=2;align=center;verticalAlign=middle;fontSize=12;" value="&lt;b&gt;Amazon S3&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;Almacenamiento complementario&lt;br&gt;Versionado + bloqueo público&lt;/font&gt;" vertex="1">
+          <mxGeometry height="85" width="240" x="1130" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-17" parent="1" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#FEFCE8;strokeColor=light-dark(#000000, #a66f00);fontColor=#713F12;strokeWidth=2;align=left;verticalAlign=top;spacingLeft=12;spacingTop=10;fontSize=12;" value="&lt;b&gt;Security Groups&lt;/b&gt;&lt;br&gt;&lt;font style=&quot;font-size:10px&quot;&gt;ALB: HTTP 80 desde Internet&lt;br&gt;EC2: HTTP 80 desde ALB&lt;br&gt;RDS: MySQL 3306 desde EC2&lt;br&gt;SSH: solo IP del administrador&lt;/font&gt;" vertex="1">
+          <mxGeometry height="120" width="240" x="1100" y="720" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-18" edge="1" parent="1" source="-BKClFIYBC12abc-iSJ8-4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=10;fontColor=#334155;" target="-BKClFIYBC12abc-iSJ8-5" value="HTTP 80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-19" edge="1" parent="1" source="-BKClFIYBC12abc-iSJ8-5" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#475569;strokeWidth=2;endArrow=block;endFill=1;fontSize=10;fontColor=#334155;" target="-BKClFIYBC12abc-iSJ8-6" value="HTTP 80">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-20" edge="1" parent="1" source="-BKClFIYBC12abc-iSJ8-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#2563EB;strokeWidth=2;endArrow=block;endFill=1;fontSize=10;fontColor=#1D4ED8;" target="-BKClFIYBC12abc-iSJ8-7" value="forward">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-21" edge="1" parent="1" source="-BKClFIYBC12abc-iSJ8-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#F59E0B;strokeWidth=2;endArrow=block;endFill=1;fontSize=10;fontColor=#92400E;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" target="-BKClFIYBC12abc-iSJ8-9" value="HTTP 80">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="560" y="480" />
+              <mxPoint x="550" y="480" />
+              <mxPoint x="550" y="562" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-22" edge="1" parent="1" source="-BKClFIYBC12abc-iSJ8-7" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#F59E0B;strokeWidth=2;endArrow=block;endFill=1;fontSize=10;fontColor=#92400E;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.717;exitY=1.001;exitDx=0;exitDy=0;exitPerimeter=0;" target="-BKClFIYBC12abc-iSJ8-10" value="HTTP 80">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="619" y="480" />
+              <mxPoint x="775" y="480" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-23" edge="1" parent="1" source="-BKClFIYBC12abc-iSJ8-11" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7C3AED;strokeWidth=2;endArrow=block;endFill=1;fontSize=10;fontColor=#4C1D95;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" target="-BKClFIYBC12abc-iSJ8-14" value="MySQL 3306">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-24" edge="1" parent="1" source="-BKClFIYBC12abc-iSJ8-12" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#7C3AED;strokeWidth=2;endArrow=block;endFill=1;fontSize=10;fontColor=#4C1D95;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="-BKClFIYBC12abc-iSJ8-14" value="MySQL 3306">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-25" edge="1" parent="1" source="-BKClFIYBC12abc-iSJ8-8" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#16A34A;strokeWidth=2;endArrow=block;endFill=1;fontSize=10;fontColor=#166534;" target="-BKClFIYBC12abc-iSJ8-16" value="archivos / respaldos">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-26" edge="1" parent="1" source="-BKClFIYBC12abc-iSJ8-15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DB2777;strokeWidth=3;dashed=1;endArrow=block;endFill=1;fontSize=10;fontColor=#831843;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="-BKClFIYBC12abc-iSJ8-6" value="métricas">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="560" y="500" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-27" edge="1" parent="1" source="-BKClFIYBC12abc-iSJ8-15" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DB2777;strokeWidth=3;dashed=1;endArrow=block;endFill=1;fontSize=10;fontColor=#831843;entryX=0.992;entryY=0.568;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0;exitY=0.75;exitDx=0;exitDy=0;" value="monitoreo">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1084" y="324" />
+              <mxPoint x="1084" y="410" />
+              <mxPoint x="1094" y="410" />
+              <mxPoint x="1094" y="695" />
+              <mxPoint x="844" y="695" />
+              <mxPoint x="844" y="786" />
+            </Array>
+            <mxPoint x="1083.8399999999995" y="338.89999999999975" as="sourcePoint" />
+            <mxPoint x="780.0000000000003" y="786.15" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-BKClFIYBC12abc-iSJ8-30" edge="1" parent="1" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=#DB2777;strokeWidth=3;dashed=1;endArrow=block;endFill=1;fontSize=10;fontColor=#831843;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="-BKClFIYBC12abc-iSJ8-7" value="métricas">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1090" y="430" as="sourcePoint" />
+            <mxPoint x="770" y="441" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
